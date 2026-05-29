@@ -363,7 +363,6 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    <a href="app.html" class="btn btn-primary">Запустить приложение</a>
 
     .hero-description {
       font-size: clamp(1.05rem, 2vw, 1.25rem);
@@ -1220,4 +1219,1107 @@
       font-size: 0.95rem;
       line-height: 1.7;
       margin-top: 16px;
-      max-width: 300px
+      max-width: 300px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .footer-socials a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.6);
+      transition: var(--transition);
+    }
+
+    .footer-socials a:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col a {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* ===== SCROLL TO TOP ===== */
+    .scroll-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: var(--shadow-md);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: var(--transition);
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-top:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-image {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .journey-path {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .journey-arrow {
+        transform: rotate(90deg);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 72px 0;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(15, 10, 26, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+      }
+
+      .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-links a {
+        font-size: 1.25rem;
+        color: #fff;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .hero-stats {
+        gap: 32px;
+      }
+
+      .hero-stat-number {
+        font-size: 2rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .advantages-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison-table {
+        font-size: 0.85rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 14px 16px;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-cards {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+      }
+
+      .pricing-card.featured {
+        transform: scale(1);
+      }
+
+      .pricing-card.featured:hover {
+        transform: translateY(-8px);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .hero {
+        padding: 100px 16px 60px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+
+      .feature-card {
+        padding: 28px 22px;
+      }
+
+      .pricing-card {
+        padding: 32px 24px;
+      }
+    }
+
+    /* ===== ACCESSIBILITY ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 16px;
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: var(--radius-sm);
+      z-index: 10000;
+      font-weight: 600;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+</style>
+</head>
+<body>
+
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-link">Перейти к основному содержимому</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header" role="banner">
+    <div class="container">
+      <a href="#" class="logo" aria-label="LearnPath — Главная">
+        <div class="logo-icon" aria-hidden="true">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        LearnPath
+      </a>
+
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Основная навигация">
+        <a href="#about">О приложении</a>
+        <a href="#features">Функции</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#testimonials">Отзывы</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="app.html" class="btn btn-primary nav-cta">Открыть приложение</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg-orb hero-bg-orb--1" aria-hidden="true"></div>
+      <div class="hero-bg-orb hero-bg-orb--2" aria-hidden="true"></div>
+      <div class="hero-bg-orb hero-bg-orb--3" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+          <i class="fas fa-sparkles" aria-hidden="true"></i>
+          Персональное обучение нового поколения
+        </div>
+
+        <h1 id="hero-title" data-aos="fade-up" data-aos-delay="400">
+          Ваш уникальный путь<br>к <span class="highlight">новой профессии</span>
+        </h1>
+
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="600">
+          LearnPath создаёт индивидуальный учебный план под ваши цели, график и бюджет.
+          От новичка до профессионала — шаг за шагом, без лишнего.
+        </p>
+
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
+          <a href="#about" class="btn btn-primary btn-lg">
+            <i class="fas fa-arrow-down" aria-hidden="true"></i>
+            Узнать больше
+          </a>
+          <a href="app.html" class="btn btn-outline btn-lg" style="color: #fff; border-color: rgba(255,255,255,0.3);">
+            Открыть приложение
+          </a>
+        </div>
+
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="1000">
+          <div class="hero-stat">
+            <div class="hero-stat-number">50K+</div>
+            <div class="hero-stat-label">Пользователей</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">200+</div>
+            <div class="hero-stat-label">Направлений</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">4.9</div>
+            <div class="hero-stat-label">Средний рейтинг</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero-scroll-indicator" aria-label="Прокрутить вниз">
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image" data-aos="fade-right" data-aos-duration="800">
+            <div class="about-image-placeholder">
+              <!-- SVG Placeholder -->
+              <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="30" y="40" width="140" height="90" rx="12" fill="#fff" opacity="0.6"/>
+                <rect x="50" y="60" width="100" height="8" rx="4" fill="#6C3CE1" opacity="0.4"/>
+                <rect x="50" y="76" width="70" height="6" rx="3" fill="#6C3CE1" opacity="0.25"/>
+                <rect x="50" y="88" width="85" height="6" rx="3" fill="#6C3CE1" opacity="0.25"/>
+                <rect x="50" y="100" width="60" height="6" rx="3" fill="#6C3CE1" opacity="0.25"/>
+                <circle cx="140" cy="160" r="25" fill="#6C3CE1" opacity="0.3"/>
+                <path d="M132 160L138 166L150 154" stroke="#6C3CE1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+              </svg>
+              <div class="about-image-badge">
+                <div class="about-image-badge-icon">
+                  <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <div class="about-image-badge-text">AI-планировщик</div>
+                  <div class="about-image-badge-sub">Умный подбор контента</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content" data-aos="fade-left" data-aos-duration="800">
+            <h2 id="about-title">Обучение, которое <br>подстраивается под вас</h2>
+            <p>
+              LearnPath — это умное приложение, которое анализирует ваши цели, уровень подготовки,
+              доступное время и бюджет, чтобы составить персональный учебный план. Никаких универсальных
+              курсов — только то, что нужно именно вам.
+            </p>
+            <p>
+              Мы объединяем лучшие курсы, книги, видеолекции и практические задания в единую
+              траекторию, которая ведёт вас к результату максимально эффективным путём.
+            </p>
+
+            <div class="about-features-list">
+              <div class="about-feature-item">
+                <div class="about-feature-icon" aria-hidden="true"><i class="fas fa-check"></i></div>
+                <span>Индивидуальный план на неделю и месяц с конкретными материалами</span>
+              </div>
+              <div class="about-feature-item">
+                <div class="about-feature-icon" aria-hidden="true"><i class="fas fa-check"></i></div>
+                <span>Альтернативные траектории: самостоятельное изучение или с ментором</span>
+              </div>
+              <div class="about-feature-item">
+                <div class="about-feature-icon" aria-hidden="true"><i class="fas fa-check"></i></div>
+                <span>Учёт ограничений по здоровью для подбора доступного контента</span>
+              </div>
+              <div class="about-feature-item">
+                <div class="about-feature-icon" aria-hidden="true"><i class="fas fa-check"></i></div>
+                <span>Адаптация плана в реальном времени по мере вашего прогресса</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== JOURNEY ===== -->
+    <section class="section journey" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-aos="fade-up">Ваш путь</div>
+          <h2 class="section-title" id="journey-title" data-aos="fade-up" data-aos-delay="100">
+            От точки А к точке Б
+          </h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Мы поможем вам преодолеть расстояние между «хочу» и «умею»
+          </p>
+        </div>
+
+        <div class="journey-path">
+          <div class="journey-point journey-point--a" data-aos="fade-right" data-aos-duration="700">
+            <div class="journey-point-icon" aria-hidden="true">
+              <i class="fas fa-question"></i>
+            </div>
+            <h3>Точка А</h3>
+            <p>Вы не знаете, с чего начать. Разрозненные курсы, нет системы, мотивация тает. Время уходит, а результат не приближается.</p>
+          </div>
+
+          <div class="journey-arrow" aria-hidden="true">
+            <i class="fas fa-arrow-right"></i>
+            <span>LearnPath</span>
+          </div>
+
+          <div class="journey-point journey-point--b" data-aos="fade-left" data-aos-duration="700">
+            <div class="journey-point-icon" aria-hidden="true">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3>Точка Б</h3>
+            <p>Чёткий план, конкретные шаги каждую неделю. Вы видите прогресс, понимаете, куда двигаетесь, и уверенно достигаете цели.</p>
+          </div>
+        </div>
+
+        <div class="journey-cards">
+          <div class="journey-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="journey-card-icon" style="background: linear-gradient(135deg, #6C3CE1, #A855F7);" aria-hidden="true">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h4>Смена профессии</h4>
+            <p>Полное переобучение с нуля до трудоустройства в новой сфере</p>
+          </div>
+          <div class="journey-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="journey-card-icon" style="background: linear-gradient(135deg, #F59E0B, #FBBF24);" aria-hidden="true">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h4>Рост по специальности</h4>
+            <p>Повышение квалификации и углубление экспертизы в текущей области</p>
+          </div>
+          <div class="journey-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="journey-card-icon" style="background: linear-gradient(135deg, #10B981, #34D399);" aria-hidden="true">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h4>Хобби и навыки</h4>
+            <p>Освоение нового навыка для себя в комфортном темпе</p>
+          </div>
+          <div class="journey-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="journey-card-icon" style="background: linear-gradient(135deg, #EF4444, #F87171);" aria-hidden="true">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h4>Подготовка к экзамену</h4>
+            <p>Структурированная подготовка к сертификации с дедлайнами</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section features" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-aos="fade-up">Функционал</div>
+          <h2 class="section-title" id="features-title" data-aos="fade-up" data-aos-delay="100">
+            Всё, что нужно для эффективного обучения
+          </h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Интеллектуальные инструменты, которые делают ваш учебный процесс максимально персонализированным
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #6C3CE1, #A855F7);" aria-hidden="true">
+              <i class="fas fa-compass-drafting"></i>
+            </div>
+            <h3>Умный планировщик</h3>
+            <p>AI-алгоритм формирует детальный план обучения на неделю и месяц, учитывая ваши цели, уровень и доступное время.</p>
+          </article>
+
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #F59E0B, #FBBF24);" aria-hidden="true">
+              <i class="fas fa-film"></i>
+            </div>
+            <h3>Мультимедийный контент</h3>
+            <p>Видеолекции с домашними заданиями, интерактивные тренажёры, текстовые материалы и живые вебинары — выбирайте свой формат.</p>
+          </article>
+
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #10B981, #34D399);" aria-hidden="true">
+              <i class="fas fa-route"></i>
+            </div>
+            <h3>Альтернативные траектории</h3>
+            <p>Два пути для каждой темы: самостоятельное изучение и обучение с ментором. Переключайтесь в зависимости от ситуации.</p>
+          </article>
+
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #EF4444, #F87171);" aria-hidden="true">
+              <i class="fas fa-universal-access"></i>
+            </div>
+            <h3>Доступность контента</h3>
+            <p>Учитываем ограничения по здоровью: субтитры, адаптация для дислексии, аудио-контент для слабовидящих.</p>
+          </article>
+
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #3B82F6, #60A5FA);" aria-hidden="true">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3>Трекер прогресса</h3>
+            <p>Наглядная статистика: выполненные задания, пройденные темы, затраченное время. Видьте свой рост каждый день.</p>
+          </article>
+
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #8B5CF6, #C084FC);" aria-hidden="true">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <h3>Контроль бюджета</h3>
+            <p>Подбираем бесплатные и платные материалы в рамках вашего бюджета. Никаких скрытых расходов — всё прозрачно.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ADVANTAGES ===== -->
+    <section class="section advantages" id="advantages" aria-labelledby="advantages-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-aos="fade-up">Преимущества</div>
+          <h2 class="section-title" id="advantages-title" data-aos="fade-up" data-aos-delay="100" style="color: #fff;">
+            Почему LearnPath — это не просто ещё один курс
+          </h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Мы не продаём курсы. Мы строим ваш персональный путь к знаниям.
+          </p>
+        </div>
+
+        <div class="advantages-grid">
+          <div class="advantage-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="advantage-card-icon" aria-hidden="true">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Персонализация на каждом шагу</h3>
+            <p>В отличие от платформ с готовыми курсами, LearnPath создаёт уникальный план именно для вас, учитывая более 10 параметров.</p>
+          </div>
+
+          <div class="advantage-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="advantage-card-icon" aria-hidden="true">
+              <i class="fas fa-arrows-rotate"></i>
+            </div>
+            <h3>Адаптивность в реальном времени</h3>
+            <p>План меняется по мере вашего прогресса. Застряли на теме? Мы добавим дополнительные материалы. Всё легко? Ускорим темп.</p>
+          </div>
+
+          <div class="advantage-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="advantage-card-icon" aria-hidden="true">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3>Инклюзивность</h3>
+            <p>Единственная платформа, которая учитывает ограничения по здоровью и подбирает контент, доступный для каждого.</p>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="advantage-comparison" data-aos="fade-up" data-aos-delay="400">
+          <h3 style="text-align: center; color: #fff; font-size: 1.5rem; font-weight: 700; margin-bottom: 28px;">
+            Сравнение с аналогами
+          </h3>
+          <div style="overflow-x: auto;">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th scope="col">Функция</th>
+                  <th scope="col" class="comparison-highlight">LearnPath</th>
+                  <th scope="col">Онлайн-курсы</th>
+                  <th scope="col">YouTube</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Персональный учебный план</td>
+                  <td class="comparison-highlight"><span class="check"><i class="fas fa-check" aria-hidden="true"></i></span></td>
+                  <td><span class="cross"><i class="fas fa-xmark" aria-hidden="true"></i></span></td>
+                  <td><span class="cross"><i class="fas fa-xmark" aria-hidden="true"></i></span></td>
+                </tr>
+                <tr>
+                  <td>Учёт уровня и времени</td>
+                  <td class="comparison-highlight"><span class="check"><i class="fas fa-check" aria-hidden="true"></i></span></td>
+                  <td><span class="cross"><i class="fas fa-xmark" aria-hidden="true"></i></span></td>
+                  <td><span class="cross"><i class="fas fa-xmark" aria-hidden="true"></i></span></td>
+                </tr>
+                <tr>
+                  <td>Доступность (субтитры, аудио)</td>
+                  <td class="comparison-highlight"><span class="check"><i class="fas fa-check" aria-hidden="true"></i></span></td>
+                  <td><span class="cross"><i class="fas fa-xmark" aria-hidden="true"></i></span></td>
+                  <td>Частично</td>
+                </tr>
+                <tr>
+                  <td>Альтернативные траектории</td>
+                  <td class="comparison-highlight"><span class="check"><i class="fas fa-check" aria-hidden="true"></i></span></td>
+                  <td><span class="cross"><i class="fas fa-xmark" aria-hidden="true"></i></span></td>
+                  <td><span class="cross"><i class="fas fa-xmark" aria-hidden="true"></i></span></td>
+                </tr>
+                <tr>
+                  <td>Подбор по бюджету</td>
+                  <td class="comparison-highlight"><span class="check"><i class="fas fa-check" aria-hidden="true"></i></span></td>
+                  <td><span class="cross"><i class="fas fa-xmark" aria-hidden="true"></i></span></td>
+                  <td>Бесплатно</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-aos="fade-up">Отзывы</div>
+          <h2 class="section-title" id="testimonials-title" data-aos="fade-up" data-aos-delay="100">
+            Что говорят наши пользователи
+          </h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Реальные истории людей, которые изменили свою жизнь с LearnPath
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-stars" aria-label="Рейтинг: 5 из 5">
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="testimonial-text">
+              «Я полгода не мог определиться, с чего начать изучение аналитики данных. LearnPath за 5 минут составил мне план на 3 месяца. Через 10 недель я уже прошёл собеседование на junior-позицию!»
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #6C3CE1, #A855F7);" aria-hidden="true">
+                АК
+              </div>
+              <div class="testimonial-author-info">
+                <h4>Алексей Козлов</h4>
+                <p>Сменил профессию: менеджер → Data Analyst</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-stars" aria-label="Рейтинг: 5 из 5">
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="testimonial-text">
+              «У меня дислексия, и обычные курсы — это кошмар. LearnPath подобрал материалы с аудио-озвучкой и субтитрами. Наконец-то я могу учиться комфортно. Это бесценно.»
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #10B981, #34D399);" aria-hidden="true">
+                МС
+              </div>
+              <div class="testimonial-author-info">
+                <h4>Мария Соколова</h4>
+                <p>Осваивает UX/UI-дизайн как хобби</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-stars" aria-label="Рейтинг: 5 из 5">
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star-half-stroke" aria-hidden="true"></i>
+            </div>
+            <blockquote class="testimonial-text">
+              «Готовился к сертификации AWS с помощью LearnPath. План был чёткий: каждый день конкретная тема + практика. Сдал экзамен с первой попытки! Ментор помогал на сложных темах.»
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: linear-gradient(135deg, #F59E0B, #FBBF24);" aria-hidden="true">
+                ДВ
+              </div>
+              <div class="testimonial-author-info">
+                <h4>Дмитрий Волков</h4>
+                <p>Получил AWS Solutions Architect сертификат</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-aos="fade-up">FAQ</div>
+          <h2 class="section-title" id="faq-title" data-aos="fade-up" data-aos-delay="100">
+            Часто задаваемые вопросы
+          </h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Ответы на самые популярные вопросы о работе приложения
+          </p>
+        </div>
+
+        <div class="faq-list" role="list">
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="100" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+              <span>Как LearnPath составляет учебный план?</span>
+              <span class="faq-question-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" role="region">
+              <div class="faq-answer-inner">
+                После того как вы укажете цель обучения, формат, уровень, доступное время и бюджет, наш AI-алгоритм анализирует тысячи образовательных ресурсов и формирует детальный план. Он включает конкретные курсы, лекции, книги и практические задания на каждую неделю. План адаптируется по мере вашего прогресса.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="200" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+              <span>Можно ли использовать приложение бесплатно?</span>
+              <span class="faq-question-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" role="region">
+              <div class="faq-answer-inner">
+                Да! Базовый тариф полностью бесплатен и включает составление одного учебного плана в месяц, доступ к бесплатным материалам и трекинг прогресса. Премиум-тариф открывает безлимитные планы, доступ к платным курсам со скидками и возможность работы с ментором.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="300" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+              <span>Что такое альтернативные траектории?</span>
+              <span class="faq-question-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3" role="region">
+              <div class="faq-answer-inner">
+                Для каждой темы в вашем плане мы предлагаем два варианта прохождения: самостоятельное изучение (бесплатные и недорогие материалы) и обучение с ментором (персональная поддержка, разбор сложных тем, код-ревью). Вы можете переключаться между траекториями в любой момент.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="400" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+              <span>Как учитываются ограничения по здоровью?</span>
+              <span class="faq-question-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" id="faq-answer-4" role="region">
+              <div class="faq-answer-inner">
+                При регистрации вы можете указать особенности: дислексия, необходимость субтитров, слабовидение и т.д. Алгоритм подберёт контент, соответствующий вашим потребностям: видео с субтитрами, аудио-лекции, материалы с адаптированной типографикой и другие доступные форматы.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="500" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+              <span>На каких устройствах работает приложение?</span>
+              <span class="faq-question-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" id="faq-answer-5" role="region">
+              <div class="faq-answer-inner">
+                LearnPath доступен как веб-приложение (работает в любом браузере на компьютере, планшете и телефоне), а также в виде мобильных приложений для iOS и Android. Ваш прогресс синхронизируется между всеми устройствами.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="600" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+              <span>Могу ли я изменить план в процессе обучения?</span>
+              <span class="faq-question-icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" id="faq-answer-6" role="region">
+              <div class="faq-answer-inner">
+                Конечно! Вы можете скорректировать любую часть плана: изменить цель, добавить или убрать темы, скорректировать расписание. Приложение автоматически пересчитает весь маршрут и предложит обновлённый план с учётом вашего текущего прогресса.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section class="section pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-aos="fade-up">Тарифы</div>
+          <h2 class="section-title" id="pricing-title" data-aos="fade-up" data-aos-delay="100">
+            Выберите свой план
+          </h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+            Начните бесплатно — переходите на премиум, когда будете готовы
+          </p>
+        </div>
+
+        <div class="pricing-cards">
+          <!-- Free Plan -->
+          <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Бесплатный</h3>
+            <p class="pricing-desc">Идеально для знакомства с платформой</p>
+            <div class="pricing-amount">
+              <div class="price"><span class="currency">₽</span>0</div>
+              <div class="period">навсегда</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check" aria-hidden="true"></i> 1 учебный план в месяц</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Бесплатные материалы</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Трекер прогресса</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Самостоятельная траектория</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Базовая доступность</li>
+            </ul>
+            <a href="#" class="btn btn-outline" aria-label="Начать бесплатно">
+              Начать бесплатно
+            </a>
+          </div>
+
+          <!-- Premium Plan -->
+          <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-badge">Популярный</div>
+            <h3>Премиум</h3>
+            <p class="pricing-desc">Всё для серьёзного обучения</p>
+            <div class="pricing-amount">
+              <div class="price"><span class="currency">₽</span>499</div>
+              <div class="period">в месяц</div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check" aria-hidden="true"></i> Безлимитные учебные планы</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Платные курсы со скидками до 70%</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Расширенная аналитика прогресса</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Траектория с ментором</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Полная доступность контента</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Приоритетная поддержка</li>
+            </ul>
+            <a href="#" class="btn btn-accent" aria-label="Оформить премиум за 499 рублей в месяц">
+              <i class="fas fa-crown" aria-hidden="true"></i>
+              Оформить премиум
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" aria-label="LearnPath — Главная">
+            <div class="logo-icon" aria-hidden="true">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            LearnPath
+          </a>
+          <p>Персонализированное онлайн-образование, которое подстраивается под вас. Учитесь эффективнее, достигайте целей быстрее.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="VKontakte"><i class="fab fa-vk" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Продукт</h4>
+          <ul>
+            <li><a href="#features">Функции</a></li>
+            <li><a href="#pricing">Тарифы</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Обновления</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Компания</h4>
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Карьера</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Поддержка</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#">Документация</a></li>
+            <li><a href="#">Сообщество</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 LearnPath. Все права защищены.</p>
+        <p>Сделано с <i class="fas fa-heart" style="color: #EF4444;" aria-hidden="true"></i> для тех, кто учится</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Прокрутить наверх">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // ===== AOS Init =====
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 80,
+      disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    });
+
+    // ===== Header scroll effect =====
+    const header = document.getElementById('header');
+    const scrollTopBtn = document.getElementById('scrollTop');
+
+    function handleScroll() {
+      const scrollY = window.scrollY;
+
+      // Header background
+      if (scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+
+      // Scroll to top button visibility
+      if (scrollY > 600) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    // ===== Scroll to top =====
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== Mobile menu =====
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      const isActive = navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', isActive);
+
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = isActive ? 'hidden' : '';
+    });
+
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close mobile menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        menuToggle.focus();
+      }
+    });
+
+    // ===== FAQ Accordion =====
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const answerInner = item.querySelector('.faq-answer-inner');
+
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Close all other items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+          }
+        });
+
+        // Toggle current item
+        if (isActive) {
+          item.classList.remove('active');
+          question.setAttribute('aria-expanded', 'false');
+          answer.style.maxHeight = '0';
+        } else {
+          item.classList.add('active');
+          question.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = answerInner.scrollHeight + 22 + 'px';
+        }
+      });
+
+      // Keyboard support for FAQ
+      question.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          question.click();
+        }
+      });
+    });
+
+    // ===== Smooth scroll for all anchor links =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          const headerHeight = header.offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+
+          // Set focus for accessibility
+          target.setAttribute('tabindex', '-1');
+          target.focus({ preventScroll: true });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
